@@ -24,7 +24,7 @@ func genreScrape(genre string) {
 	}
 	defer req.Body.Close()
 
-	doc, err := goquery.NewDocumentFromReader(res.Body)
+	doc, err := goquery.NewDocumentFromReader(req.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
